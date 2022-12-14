@@ -25,7 +25,7 @@ namespace DeveloperAllocationMVP
         //gets the level assigned in memory and puts it into the database
         [Column(TypeName = "char")]
         [StringLength(1)]
-        public String NivelBD
+        public String Nivel
         {
             get
             {

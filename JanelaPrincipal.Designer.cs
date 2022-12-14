@@ -65,6 +65,7 @@
             this.mnuSair.Name = "mnuSair";
             this.mnuSair.Size = new System.Drawing.Size(180, 22);
             this.mnuSair.Text = "Sair";
+            this.mnuSair.Click += new System.EventHandler(this.mnuSair_Click);
             // 
             // JanelaPrincipal
             // 

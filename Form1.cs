@@ -33,7 +33,7 @@ namespace DeveloperAllocationMVP
             {
                 txtEmail.Clear();
                 txtSenha.Clear();
-                this.Hide();
+                this.Close();
                 JanelaPrincipal jp = JanelaPrincipal.GetInstance();
                 jp.Show();
             }

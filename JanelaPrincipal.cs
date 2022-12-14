@@ -23,5 +23,10 @@ namespace DeveloperAllocationMVP
             if(_instance == null || _instance.IsDisposed) _instance = new JanelaPrincipal();
             return _instance;
         }
+
+        private void mnuSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
