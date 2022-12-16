@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeveloperAllocationMVP.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,13 @@ namespace DeveloperAllocationMVP
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mnuDeveloper_Click(object sender, EventArgs e)
+        {
+            DeveloperRegistrationWindow d = DeveloperRegistrationWindow.GetInstance();
+            d.MdiParent = this;
+            d.Show();
         }
     }
 }

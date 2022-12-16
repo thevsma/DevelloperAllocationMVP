@@ -33,7 +33,7 @@ namespace DeveloperAllocationMVP
                 //creating a default credential
                 Credential credPadrao = new Credential();
                 credPadrao.Email = "matheus@gmail.com";
-                credPadrao.Password = "prates123";
+                credPadrao.Password = "prates123@";
                 credPadrao.Active = true;
                 credPadrao.Admin = true;
 

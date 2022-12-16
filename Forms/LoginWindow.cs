@@ -46,5 +46,10 @@ namespace DeveloperAllocationMVP
                 jp.Show();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            Repository repos = new Repository();
+        }
     }
 }
