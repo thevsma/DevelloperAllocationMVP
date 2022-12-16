@@ -16,8 +16,6 @@ namespace DeveloperAllocationMVP.Forms
         public DeveloperRegistrationWindow()
         {
             InitializeComponent();
-
-
         }
 
         public static DeveloperRegistrationWindow GetInstance()
@@ -46,6 +44,7 @@ namespace DeveloperAllocationMVP.Forms
             repos.Developers.Add(dev);
             repos.SaveChanges();
 
+            MessageBox.Show(String.Format("Desenvolvedor {0} cadastrado!", dev.Name));
             this.Close();
         }
 

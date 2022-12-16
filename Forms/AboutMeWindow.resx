@@ -117,10 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Meu nome é Matheus Vieira, tenho 18 anos e sou um estudante do IFNMG.
+
+Tenho experiência em estágio de montagem e manutenção de computadores e atualmente estudo C# e MySql.
+
+Tenho conhecimento intermediário-avançado em Inglês, com cerca de 3 anos de curso.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        /9j/4AAQSkZJRgABAgEAAAAAAAD/4QN4RXhpZgAATU0AKgAAAAgADQEPAAIAAAAHAAAAqgEQAAIAAAAY
+        /9j/4AAQSkZJRgABAgEASABIAAD/4QN4RXhpZgAATU0AKgAAAAgADQEPAAIAAAAHAAAAqgEQAAIAAAAY
         AAAAsgESAAQAAAABAAAAAQEaAAUAAAABAAAAygEbAAUAAAABAAAA0gEoAAMAAAABAAIAAAExAAIAAAAN
         AAAA2gEyAAIAAAAUAAAA6AITAAMAAAABAAEAAIdpAAQAAAABAAAA/JAQAAIAAAAHAAADWJARAAIAAAAH
         AAADYJASAAIAAAAHAAADaAAAAABYaWFvbWkAAFJlZG1pIE5vdGUgOVMgKGN1cnRhbmEpAAAAAEgAAAAB

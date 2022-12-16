@@ -113,6 +113,12 @@
     <Compile Include="Forms\DeveloperRegistrationWindow.Designer.cs">
       <DependentUpon>DeveloperRegistrationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProjectRegistrationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectRegistrationWindow.Designer.cs">
+      <DependentUpon>ProjectRegistrationWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\CredentialRepository.cs" />
     <Compile Include="Repositories\DeveloperRepository.cs" />
     <Compile Include="Forms\LoginWindow.cs">
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectRegistrationWindow.resx">
+      <DependentUpon>ProjectRegistrationWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

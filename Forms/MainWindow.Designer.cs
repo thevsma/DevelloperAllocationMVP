@@ -34,6 +34,7 @@
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDeveloper = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProject = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,21 +61,22 @@
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(180, 22);
+            this.mnuAbout.Size = new System.Drawing.Size(104, 22);
             this.mnuAbout.Text = "Sobre";
             this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // mnuClose
             // 
             this.mnuClose.Name = "mnuClose";
-            this.mnuClose.Size = new System.Drawing.Size(180, 22);
+            this.mnuClose.Size = new System.Drawing.Size(104, 22);
             this.mnuClose.Text = "Sair";
             this.mnuClose.Click += new System.EventHandler(this.mnuSair_Click);
             // 
             // mnuRegister
             // 
             this.mnuRegister.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuDeveloper});
+            this.mnuDeveloper,
+            this.mnuProject});
             this.mnuRegister.Name = "mnuRegister";
             this.mnuRegister.Size = new System.Drawing.Size(66, 20);
             this.mnuRegister.Text = "Cadastro";
@@ -82,9 +84,16 @@
             // mnuDeveloper
             // 
             this.mnuDeveloper.Name = "mnuDeveloper";
-            this.mnuDeveloper.Size = new System.Drawing.Size(152, 22);
+            this.mnuDeveloper.Size = new System.Drawing.Size(180, 22);
             this.mnuDeveloper.Text = "Desenvolvedor";
             this.mnuDeveloper.Click += new System.EventHandler(this.mnuDeveloper_Click);
+            // 
+            // mnuProject
+            // 
+            this.mnuProject.Name = "mnuProject";
+            this.mnuProject.Size = new System.Drawing.Size(180, 22);
+            this.mnuProject.Text = "Projeto";
+            this.mnuProject.Click += new System.EventHandler(this.mnuProject_Click);
             // 
             // MainWindow
             // 
@@ -112,5 +121,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuClose;
         private System.Windows.Forms.ToolStripMenuItem mnuRegister;
         private System.Windows.Forms.ToolStripMenuItem mnuDeveloper;
+        private System.Windows.Forms.ToolStripMenuItem mnuProject;
     }
 }

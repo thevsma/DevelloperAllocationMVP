@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.lblLevel = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPwd = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.txtLevel = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPwd = new System.Windows.Forms.TextBox();
-            this.cbAdmin = new System.Windows.Forms.CheckBox();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.lblActive = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
+            this.lblActive = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtLevel = new System.Windows.Forms.TextBox();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.lblPwd = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbActive);
             this.panel1.Controls.Add(this.lblActive);
             this.panel1.Controls.Add(this.btnRegister);
@@ -67,118 +69,32 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 271);
+            this.panel1.Size = new System.Drawing.Size(403, 280);
             this.panel1.TabIndex = 0;
             // 
-            // lblName
+            // cbActive
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(81, 29);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Nome:";
+            this.cbActive.AutoSize = true;
+            this.cbActive.Location = new System.Drawing.Point(173, 209);
+            this.cbActive.Name = "cbActive";
+            this.cbActive.Size = new System.Drawing.Size(15, 14);
+            this.cbActive.TabIndex = 14;
+            this.cbActive.UseVisualStyleBackColor = true;
             // 
-            // lblBirthday
+            // lblActive
             // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(12, 52);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(107, 13);
-            this.lblBirthday.TabIndex = 1;
-            this.lblBirthday.Text = "Data de Nascimento:";
-            // 
-            // lblLevel
-            // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(83, 81);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(36, 13);
-            this.lblLevel.TabIndex = 2;
-            this.lblLevel.Text = "Nível:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(84, 107);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblPwd
-            // 
-            this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(78, 133);
-            this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(41, 13);
-            this.lblPwd.TabIndex = 4;
-            this.lblPwd.Text = "Senha:";
-            // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Location = new System.Drawing.Point(43, 156);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(76, 13);
-            this.lblAdmin.TabIndex = 5;
-            this.lblAdmin.Text = "Administrador?";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(125, 26);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 6;
-            this.txtName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyUp);
-            // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.Location = new System.Drawing.Point(125, 52);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthday.TabIndex = 7;
-            // 
-            // txtLevel
-            // 
-            this.txtLevel.Location = new System.Drawing.Point(125, 78);
-            this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(200, 20);
-            this.txtLevel.TabIndex = 8;
-            this.txtLevel.Text = "J (Júnior), P (Pleno) ou S (Sênior)";
-            this.txtLevel.Click += new System.EventHandler(this.txtLevel_Click);
-            this.txtLevel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLevel_KeyUp);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(125, 104);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 9;
-            this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Location = new System.Drawing.Point(125, 130);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(200, 20);
-            this.txtPwd.TabIndex = 10;
-            this.txtPwd.Text = "Deve ter entre 8 e 12 caracteres!";
-            this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
-            // 
-            // cbAdmin
-            // 
-            this.cbAdmin.AutoSize = true;
-            this.cbAdmin.Location = new System.Drawing.Point(125, 156);
-            this.cbAdmin.Name = "cbAdmin";
-            this.cbAdmin.Size = new System.Drawing.Size(15, 14);
-            this.cbAdmin.TabIndex = 11;
-            this.cbAdmin.UseVisualStyleBackColor = true;
+            this.lblActive.AutoSize = true;
+            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(114, 204);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(53, 20);
+            this.lblActive.TabIndex = 13;
+            this.lblActive.Text = "Ativo?";
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(217, 198);
+            this.btnRegister.Location = new System.Drawing.Point(265, 228);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(108, 37);
             this.btnRegister.TabIndex = 12;
@@ -186,29 +102,135 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // lblActive
+            // cbAdmin
             // 
-            this.lblActive.AutoSize = true;
-            this.lblActive.Location = new System.Drawing.Point(82, 176);
-            this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(37, 13);
-            this.lblActive.TabIndex = 13;
-            this.lblActive.Text = "Ativo?";
+            this.cbAdmin.AutoSize = true;
+            this.cbAdmin.Location = new System.Drawing.Point(173, 189);
+            this.cbAdmin.Name = "cbAdmin";
+            this.cbAdmin.Size = new System.Drawing.Size(15, 14);
+            this.cbAdmin.TabIndex = 11;
+            this.cbAdmin.UseVisualStyleBackColor = true;
             // 
-            // cbActive
+            // txtPwd
             // 
-            this.cbActive.AutoSize = true;
-            this.cbActive.Location = new System.Drawing.Point(125, 176);
-            this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(15, 14);
-            this.cbActive.TabIndex = 14;
-            this.cbActive.UseVisualStyleBackColor = true;
+            this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPwd.Location = new System.Drawing.Point(173, 163);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(200, 21);
+            this.txtPwd.TabIndex = 10;
+            this.txtPwd.Text = "Deve ter entre 8 e 12 caracteres!";
+            this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(173, 137);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLevel.Location = new System.Drawing.Point(173, 111);
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.Size = new System.Drawing.Size(200, 21);
+            this.txtLevel.TabIndex = 8;
+            this.txtLevel.Text = "J (Júnior), P (Pleno) ou S (Sênior)";
+            this.txtLevel.Click += new System.EventHandler(this.txtLevel_Click);
+            this.txtLevel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLevel_KeyUp);
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthday.Location = new System.Drawing.Point(173, 85);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(200, 21);
+            this.dtpBirthday.TabIndex = 7;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(173, 59);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 20);
+            this.txtName.TabIndex = 6;
+            this.txtName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyUp);
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Location = new System.Drawing.Point(51, 184);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(116, 20);
+            this.lblAdmin.TabIndex = 5;
+            this.lblAdmin.Text = "Administrador?";
+            // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPwd.Location = new System.Drawing.Point(107, 161);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(60, 20);
+            this.lblPwd.TabIndex = 4;
+            this.lblPwd.Text = "Senha:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(115, 135);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(52, 20);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email:";
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.Location = new System.Drawing.Point(121, 109);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.TabIndex = 2;
+            this.lblLevel.Text = "Nível:";
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthday.Location = new System.Drawing.Point(9, 85);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(158, 20);
+            this.lblBirthday.TabIndex = 1;
+            this.lblBirthday.Text = "Data de Nascimento:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(112, 57);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(55, 20);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Nome:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(92, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Cadastro de Desenvolvedores";
             // 
             // DeveloperRegistrationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 271);
+            this.ClientSize = new System.Drawing.Size(403, 280);
             this.Controls.Add(this.panel1);
             this.Name = "DeveloperRegistrationWindow";
             this.Text = "Cadastro de Desenvolvedores";
@@ -236,5 +258,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox cbActive;
         private System.Windows.Forms.Label lblActive;
+        private System.Windows.Forms.Label label1;
     }
 }
