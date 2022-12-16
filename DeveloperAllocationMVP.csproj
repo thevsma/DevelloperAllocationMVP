@@ -98,29 +98,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Credencial.cs" />
-    <Compile Include="Desenvolvedor.cs" />
-    <Compile Include="DevRepos.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Entities\Credential.cs" />
+    <Compile Include="Entities\Developer.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Repositories\CredentialRepository.cs" />
+    <Compile Include="Repositories\DeveloperRepository.cs" />
+    <Compile Include="Forms\LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="JanelaPrincipal.cs">
+    <Compile Include="Forms\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JanelaPrincipal.Designer.cs">
-      <DependentUpon>JanelaPrincipal.cs</DependentUpon>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorio.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Repositories\ProjectRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <EmbeddedResource Include="Forms\LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JanelaPrincipal.resx">
-      <DependentUpon>JanelaPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
