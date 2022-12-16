@@ -30,17 +30,32 @@ namespace DeveloperAllocationMVP
                 //creating a default credential
                 Credencial credPadrao = new Credencial();
                 credPadrao.Email = "matheus@gmail.com";
-                credPadrao.Senha = "prates123@";
+                credPadrao.Senha = "prates123";
                 credPadrao.Ativo = true;
                 credPadrao.Admin = true;
 
                 //assigning the developer and the credential to each other
-                devPadrao.Credencial = credPadrao;
                 credPadrao.Desenvolvedor = devPadrao;
+                devPadrao.Credencial = credPadrao;
 
                 //adding the default developer to the dbset and saving the changes on the repository
                 repos.Desenvolvedores.Add(devPadrao);
                 repos.SaveChanges();
+
+                Credencial teste = new Credencial();
+                teste.Email = "teste";
+                teste.Senha = "12345678";
+
+                Desenvolvedor devTeste = new Desenvolvedor();
+                devTeste.Nome = "teste";
+
+                teste.Desenvolvedor = devTeste;
+                devTeste.Credencial = teste;
+
+                repos.Desenvolvedores.Add(devTeste);
+                repos.SaveChanges();
+
+                Console.WriteLine(teste.Senha);
             }
         }
 

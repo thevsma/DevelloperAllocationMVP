@@ -16,7 +16,7 @@ namespace DeveloperAllocationMVP
         public Int64 Id { get; set; }
 
         //constant to append with the password, ensuring more security
-        public const String SALT = "m4th3eus";
+        public const String SALT = "mvp";
 
         [Index(IsUnique = true)]
         [StringLength(250)]
@@ -26,7 +26,6 @@ namespace DeveloperAllocationMVP
 
         //verifies the password length, if it is higher than 8 and lower than 12, it encrypts it
         //if the password has exactly 64 characters, it is already encrypted, so it doesn't encrypt it again
-        [Required]
         public String Senha
         {
             get 
@@ -45,7 +44,7 @@ namespace DeveloperAllocationMVP
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException("Senha inválida!");
+                    throw new ArgumentException("Senha inválida!");
                 }
             }
         }
@@ -62,10 +61,10 @@ namespace DeveloperAllocationMVP
         }
 
         #region Hashing
-        public static String ComputeSHA256(String input)
-        {
-            return ComputeSHA256(input, null);
-        }
+        //public static String ComputeSHA256(String input)
+        //{
+        //    return ComputeSHA256(input, null);
+        //}
 
         public static String ComputeSHA256(String input, String salt)
         {
@@ -83,6 +82,7 @@ namespace DeveloperAllocationMVP
         }
         #endregion
 
+        //authentication method that verifies if the password given is correct
         public static Boolean Autenticar(String email, String senha)
         {
             Desenvolvedor dev = DevRepos.EncontrarEmail(email);
@@ -90,9 +90,8 @@ namespace DeveloperAllocationMVP
             if(dev != null)
             {
                 String senhaBd = dev.Credencial.Senha;
-                senha = ComputeSHA256(senha);
 
-                if (senha == senhaBd) return true;
+                if (senhaBd == ComputeSHA256(senha, SALT)) return true;
                 else
                 {
                     MessageBox.Show("SENHA INCORRETA!");
@@ -104,6 +103,11 @@ namespace DeveloperAllocationMVP
                 MessageBox.Show("EMAIL NÃO EXISTENTE!");
                 return false;
             }
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Email: {0} \nSenha: {1}", Email, Senha);
         }
     }
 }
