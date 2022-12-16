@@ -60,13 +60,14 @@
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(104, 22);
+            this.mnuAbout.Size = new System.Drawing.Size(180, 22);
             this.mnuAbout.Text = "Sobre";
+            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // mnuClose
             // 
             this.mnuClose.Name = "mnuClose";
-            this.mnuClose.Size = new System.Drawing.Size(104, 22);
+            this.mnuClose.Size = new System.Drawing.Size(180, 22);
             this.mnuClose.Text = "Sair";
             this.mnuClose.Click += new System.EventHandler(this.mnuSair_Click);
             // 
@@ -81,7 +82,7 @@
             // mnuDeveloper
             // 
             this.mnuDeveloper.Name = "mnuDeveloper";
-            this.mnuDeveloper.Size = new System.Drawing.Size(180, 22);
+            this.mnuDeveloper.Size = new System.Drawing.Size(152, 22);
             this.mnuDeveloper.Text = "Desenvolvedor";
             this.mnuDeveloper.Click += new System.EventHandler(this.mnuDeveloper_Click);
             // 

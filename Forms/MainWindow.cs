@@ -17,6 +17,8 @@ namespace DeveloperAllocationMVP
         public MainWindow()
         {
             InitializeComponent();
+
+            if(Repository.LoggedDeveloper.Credential.Admin == false) mnuDeveloper.Enabled = false;
         }
 
         public static MainWindow GetInstance()
@@ -40,6 +42,13 @@ namespace DeveloperAllocationMVP
             DeveloperRegistrationWindow d = DeveloperRegistrationWindow.GetInstance();
             d.MdiParent = this;
             d.Show();
+        }
+
+        private void mnuAbout_Click(object sender, EventArgs e)
+        {
+            AboutMeWindow a = AboutMeWindow.GetInstance();
+            a.MdiParent = this;
+            a.Show();
         }
     }
 }

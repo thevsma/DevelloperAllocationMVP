@@ -16,6 +16,7 @@ namespace DeveloperAllocationMVP
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Credential> Credentials { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public static Developer LoggedDeveloper { get; set; }
 
         public Repository() : base(GetDbConnection(), false)
         {

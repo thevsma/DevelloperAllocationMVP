@@ -16,6 +16,8 @@ namespace DeveloperAllocationMVP.Forms
         public DeveloperRegistrationWindow()
         {
             InitializeComponent();
+
+
         }
 
         public static DeveloperRegistrationWindow GetInstance()
@@ -40,7 +42,9 @@ namespace DeveloperAllocationMVP.Forms
             dev.Credential = cred;
             cred.Developer = dev;
 
-            DeveloperRepository.Save(dev);
+            Repository repos = new Repository();
+            repos.Developers.Add(dev);
+            repos.SaveChanges();
 
             this.Close();
         }

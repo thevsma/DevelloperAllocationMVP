@@ -44,6 +44,7 @@ namespace DeveloperAllocationMVP
                 this.Hide();
                 MainWindow jp = MainWindow.GetInstance();
                 jp.Show();
+                MessageBox.Show(String.Format("Seja bem vindo(a) {0}!", Repository.LoggedDeveloper.Name));
             }
         }
 

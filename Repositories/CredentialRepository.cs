@@ -16,12 +16,24 @@ namespace DeveloperAllocationMVP.Repositories
 
             if (dev != null)
             {
-                String pwdBd = dev.Credential.Password;
+                if(dev.Credential.Active == true)
+                {
+                    String pwdBd = dev.Credential.Password;
 
-                if (pwdBd == Credential.ComputeSHA256(password, Credential.SALT)) return true;
+                    if (pwdBd == Credential.ComputeSHA256(password, Credential.SALT))
+                    {
+                        Repository.LoggedDeveloper = dev;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("SENHA INCORRETA!");
+                        return false;
+                    }
+                }
                 else
                 {
-                    MessageBox.Show("SENHA INCORRETA!");
+                    MessageBox.Show("ESTE USUÁRIO NÃO ESTÁ ATIVO!");
                     return false;
                 }
             }
