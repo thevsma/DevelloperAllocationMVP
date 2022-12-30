@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeveloperAllocationMVP.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -38,6 +39,9 @@ namespace DeveloperAllocationMVP
         }
 
         public Credential Credential { get; set; }
+
+        [NotMapped]
+        public List<Allocation> Allocations { get; set; }
 
         public Developer()
         {

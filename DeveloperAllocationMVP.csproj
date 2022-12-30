@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Allocation.cs" />
     <Compile Include="Entities\Credential.cs" />
     <Compile Include="Entities\Developer.cs" />
     <Compile Include="Entities\Project.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Forms\ProjectRegistrationWindow.Designer.cs">
       <DependentUpon>ProjectRegistrationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\AllocationRepository.cs" />
     <Compile Include="Repositories\CredentialRepository.cs" />
     <Compile Include="Repositories\DeveloperRepository.cs" />
     <Compile Include="Forms\LoginWindow.cs">

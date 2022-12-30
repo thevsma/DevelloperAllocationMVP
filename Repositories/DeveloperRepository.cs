@@ -50,5 +50,65 @@ namespace DeveloperAllocationMVP
                 throw;
             }
         }
+
+        public static List<Developer> FindAllDevs()
+        {
+            try
+            {
+                using(Repository repos = new Repository())
+                {
+                    return repos.Developers.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static Developer FindById(Int64 id)
+        {
+            try
+            {
+                using(Repository repos = new Repository())
+                {
+                    return repos.Developers.Find(id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static Developer FindByCredentialId(Int64 id)
+        {
+            try
+            {
+                using(Repository repos = new Repository())
+                {
+                    return repos.Developers.Include("Credential").Where(d => d.Id== id).FirstOrDefault<Developer>();
+                }
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
+        public static List<Developer> FindByPartialName(String name)
+        {
+            try
+            {
+                using(Repository repos = new Repository())
+                {
+                    return repos.Developers.Where(d => d.Name.Contains(name)).ToList<Developer>();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
