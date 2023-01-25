@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lblActive = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,14 +73,31 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 336);
+            this.panel1.Size = new System.Drawing.Size(392, 311);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(173, 190);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 188);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Confirmar Senha:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 9);
+            this.label1.Location = new System.Drawing.Point(68, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 20);
             this.label1.TabIndex = 15;
@@ -89,7 +106,7 @@
             // cbActive
             // 
             this.cbActive.AutoSize = true;
-            this.cbActive.Location = new System.Drawing.Point(173, 258);
+            this.cbActive.Location = new System.Drawing.Point(173, 237);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(15, 14);
             this.cbActive.TabIndex = 14;
@@ -99,7 +116,7 @@
             // 
             this.lblActive.AutoSize = true;
             this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(114, 253);
+            this.lblActive.Location = new System.Drawing.Point(114, 232);
             this.lblActive.Name = "lblActive";
             this.lblActive.Size = new System.Drawing.Size(53, 20);
             this.lblActive.TabIndex = 13;
@@ -108,7 +125,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(265, 277);
+            this.btnRegister.Location = new System.Drawing.Point(265, 255);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(108, 37);
             this.btnRegister.TabIndex = 12;
@@ -119,7 +136,7 @@
             // cbAdmin
             // 
             this.cbAdmin.AutoSize = true;
-            this.cbAdmin.Location = new System.Drawing.Point(173, 238);
+            this.cbAdmin.Location = new System.Drawing.Point(173, 217);
             this.cbAdmin.Name = "cbAdmin";
             this.cbAdmin.Size = new System.Drawing.Size(15, 14);
             this.cbAdmin.TabIndex = 11;
@@ -174,7 +191,7 @@
             // 
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(51, 233);
+            this.lblAdmin.Location = new System.Drawing.Point(51, 212);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(116, 20);
             this.lblAdmin.TabIndex = 5;
@@ -184,7 +201,7 @@
             // 
             this.lblPwd.AutoSize = true;
             this.lblPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPwd.Location = new System.Drawing.Point(107, 161);
+            this.lblPwd.Location = new System.Drawing.Point(107, 163);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(60, 20);
             this.lblPwd.TabIndex = 4;
@@ -230,28 +247,11 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Confirmar Senha:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(173, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 17;
-            // 
             // DeveloperRegistrationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 336);
+            this.ClientSize = new System.Drawing.Size(392, 311);
             this.Controls.Add(this.panel1);
             this.Name = "DeveloperRegistrationWindow";
             this.Text = "Cadastro de Desenvolvedores";
