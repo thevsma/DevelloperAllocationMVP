@@ -26,26 +26,42 @@ namespace DeveloperAllocationMVP.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Developer dev = new Developer();
-            dev.Name = txtName.Text;
-            dev.Birthday = dtpBirthday.Value;
-            dev.LvlInMemory = txtLevel.Text[0];
+            if(txtConfirmPwd.Text.Equals(txtPwd.Text))
+            {
+                if(txtName.Text != "" && txtEmail.Text != "")
+                {
+                    if (DeveloperRepository.FindByEmail(txtEmail.Text) == null)
+                    {
+                        if (txtPwd.Text.Length >= 8 && txtPwd.Text.Length <= 12)
+                        {
+                            Developer dev = new Developer();
+                            dev.Name = txtName.Text;
+                            dev.Birthday = dtpBirthday.Value;
+                            dev.LvlInMemory = txtLevel.Text[0];
 
-            Credential cred = new Credential();
-            cred.Email = txtEmail.Text;
-            cred.Password = txtPwd.Text;
-            cred.Admin = cbAdmin.Checked;
-            cred.Active= cbActive.Checked;
+                            Credential cred = new Credential();
+                            cred.Email = txtEmail.Text;
+                            cred.Password = txtPwd.Text;
+                            cred.Admin = cbAdmin.Checked;
+                            cred.Active = cbActive.Checked;
 
-            dev.Credential = cred;
-            cred.Developer = dev;
+                            dev.Credential = cred;
+                            cred.Developer = dev;
 
-            Repository repos = new Repository();
-            repos.Developers.Add(dev);
-            repos.SaveChanges();
+                            Repository repos = new Repository();
+                            repos.Developers.Add(dev);
+                            repos.SaveChanges();
 
-            MessageBox.Show(String.Format("Desenvolvedor {0} cadastrado!", dev.Name));
-            this.Close();
+                            MessageBox.Show(String.Format("Desenvolvedor {0} cadastrado!", dev.Name));
+                            this.Close();
+                        }
+                        else MessageBox.Show("A senha deve ter entre 8 e 12 caracteres!!!");
+                    }
+                    else MessageBox.Show("Usuário com este email já está cadastrado!!!");
+                }
+                else MessageBox.Show("Os campos Nome e/ou Email não podem estar vazios!!!");
+            }
+            else MessageBox.Show("As senhas não coincidem!!!");
         }
 
         private void txtLevel_Click(object sender, EventArgs e)
@@ -71,6 +87,21 @@ namespace DeveloperAllocationMVP.Forms
         private void txtEmail_KeyUp(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) txtPwd.Focus();
+        }
+
+        private void txtConfirmPwd_TextChanged(object sender, EventArgs e)
+        {
+            if (txtConfirmPwd.Text.Equals(txtPwd.Text)) btnRegister.Enabled = true;
+        }
+
+        private void txtPwd_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) txtConfirmPwd.Focus();
+        }
+
+        private void txtConfirmPwd_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) btnRegister.PerformClick();
         }
     }
 }

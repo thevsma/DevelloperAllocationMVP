@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtConfirmPwd = new System.Windows.Forms.TextBox();
+            this.lblConfirmPwd = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lblActive = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
@@ -52,9 +52,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtConfirmPwd);
+            this.panel1.Controls.Add(this.lblConfirmPwd);
+            this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.cbActive);
             this.panel1.Controls.Add(this.lblActive);
             this.panel1.Controls.Add(this.btnRegister);
@@ -76,36 +76,42 @@
             this.panel1.Size = new System.Drawing.Size(392, 311);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // txtConfirmPwd
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtConfirmPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPwd.Location = new System.Drawing.Point(173, 190);
+            this.txtConfirmPwd.Name = "txtConfirmPwd";
+            this.txtConfirmPwd.PasswordChar = '*';
+            this.txtConfirmPwd.Size = new System.Drawing.Size(200, 21);
+            this.txtConfirmPwd.TabIndex = 17;
+            this.txtConfirmPwd.TextChanged += new System.EventHandler(this.txtConfirmPwd_TextChanged);
+            this.txtConfirmPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPwd_KeyUp);
             // 
-            // label2
+            // lblConfirmPwd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 188);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Confirmar Senha:";
+            this.lblConfirmPwd.AutoSize = true;
+            this.lblConfirmPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPwd.Location = new System.Drawing.Point(34, 188);
+            this.lblConfirmPwd.Name = "lblConfirmPwd";
+            this.lblConfirmPwd.Size = new System.Drawing.Size(133, 20);
+            this.lblConfirmPwd.TabIndex = 16;
+            this.lblConfirmPwd.Text = "Confirmar Senha:";
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Cadastro de Desenvolvedores";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(68, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(249, 20);
+            this.lblTitle.TabIndex = 15;
+            this.lblTitle.Text = "Cadastro de Desenvolvedores";
             // 
             // cbActive
             // 
             this.cbActive.AutoSize = true;
+            this.cbActive.Checked = true;
+            this.cbActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbActive.Location = new System.Drawing.Point(173, 237);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(15, 14);
@@ -124,6 +130,7 @@
             // 
             // btnRegister
             // 
+            this.btnRegister.Enabled = false;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(265, 255);
             this.btnRegister.Name = "btnRegister";
@@ -151,12 +158,14 @@
             this.txtPwd.Size = new System.Drawing.Size(200, 21);
             this.txtPwd.TabIndex = 10;
             this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
+            this.txtPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPwd_KeyUp);
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(173, 137);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.Size = new System.Drawing.Size(200, 21);
             this.txtEmail.TabIndex = 9;
             this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
             // 
@@ -181,9 +190,10 @@
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(173, 59);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 20);
+            this.txtName.Size = new System.Drawing.Size(200, 21);
             this.txtName.TabIndex = 6;
             this.txtName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyUp);
             // 
@@ -279,8 +289,8 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox cbActive;
         private System.Windows.Forms.Label lblActive;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox txtConfirmPwd;
+        private System.Windows.Forms.Label lblConfirmPwd;
     }
 }

@@ -81,6 +81,7 @@
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(136, 21);
             this.txtPwd.TabIndex = 3;
+            this.txtPwd.Text = "prates123@";
             this.txtPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyUp);
             // 
             // txtEmail
@@ -90,6 +91,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(136, 21);
             this.txtEmail.TabIndex = 2;
+            this.txtEmail.Text = "matheus@gmail.com";
             this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
             // 
             // lblPwd
