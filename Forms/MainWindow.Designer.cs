@@ -84,14 +84,14 @@
             // mnuDeveloper
             // 
             this.mnuDeveloper.Name = "mnuDeveloper";
-            this.mnuDeveloper.Size = new System.Drawing.Size(180, 22);
+            this.mnuDeveloper.Size = new System.Drawing.Size(152, 22);
             this.mnuDeveloper.Text = "Desenvolvedor";
             this.mnuDeveloper.Click += new System.EventHandler(this.mnuDeveloper_Click);
             // 
             // mnuProject
             // 
             this.mnuProject.Name = "mnuProject";
-            this.mnuProject.Size = new System.Drawing.Size(180, 22);
+            this.mnuProject.Size = new System.Drawing.Size(152, 22);
             this.mnuProject.Text = "Projeto";
             this.mnuProject.Click += new System.EventHandler(this.mnuProject_Click);
             // 
@@ -104,6 +104,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Janela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.menuStrip1.ResumeLayout(false);
