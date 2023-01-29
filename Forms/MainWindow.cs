@@ -61,5 +61,12 @@ namespace DeveloperAllocationMVP
             p.MdiParent = this;
             p.Show();
         }
+
+        private void mnuDevEntries_Click(object sender, EventArgs e)
+        {
+            DeveloperLogWindow d = DeveloperLogWindow.GetInstance();
+            d.MdiParent = this;
+            d.Show();
+        }
     }
 }

@@ -108,6 +108,12 @@
     <Compile Include="Forms\AboutMeWindow.Designer.cs">
       <DependentUpon>AboutMeWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeveloperLogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeveloperLogWindow.Designer.cs">
+      <DependentUpon>DeveloperLogWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeveloperRegistrationWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Repositories\Repository.cs" />
     <EmbeddedResource Include="Forms\AboutMeWindow.resx">
       <DependentUpon>AboutMeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeveloperLogWindow.resx">
+      <DependentUpon>DeveloperLogWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeveloperRegistrationWindow.resx">
       <DependentUpon>DeveloperRegistrationWindow.cs</DependentUpon>

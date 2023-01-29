@@ -34,16 +34,9 @@ namespace DeveloperAllocationMVP.Forms
                     {
                         if (txtPwd.Text.Length >= 8 && txtPwd.Text.Length <= 12)
                         {
-                            Developer dev = new Developer();
-                            dev.Name = txtName.Text;
-                            dev.Birthday = dtpBirthday.Value;
-                            dev.LvlInMemory = txtLevel.Text[0];
+                            Developer dev = new Developer(txtName.Text, dtpBirthday.Value, txtLevel.Text[0]);
 
-                            Credential cred = new Credential();
-                            cred.Email = txtEmail.Text;
-                            cred.Password = txtPwd.Text;
-                            cred.Admin = cbAdmin.Checked;
-                            cred.Active = cbActive.Checked;
+                            Credential cred = new Credential(txtEmail.Text, txtPwd.Text, cbAdmin.Checked, cbActive.Checked);
 
                             dev.Credential = cred;
                             cred.Developer = dev;

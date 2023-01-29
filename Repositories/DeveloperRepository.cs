@@ -66,6 +66,21 @@ namespace DeveloperAllocationMVP
             }
         }
 
+        public static List<Developer> FindAllDevsCredential()
+        {
+            try
+            {
+                using (Repository repos = new Repository())
+                {
+                    return repos.Developers.Include(d => d.Credential).ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static Developer FindById(Int64 id)
         {
             try

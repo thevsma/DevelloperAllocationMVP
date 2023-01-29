@@ -47,5 +47,17 @@ namespace DeveloperAllocationMVP
         {
 
         }
+
+        public Developer(String name, DateTime birthday, Char lvlmem)
+        {
+            Name = name;
+            Birthday = birthday;
+            LvlInMemory = lvlmem;
+        }
+
+        public override String ToString()
+        {
+            return String.Format("{0}, Nível {1}, {2}", Name, LvlInMemory, Credential);
+        }
     }
 }

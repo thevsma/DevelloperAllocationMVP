@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP
 {
-    [Table("Credentials")]
-    internal class Credential
+    [Table("Credenciais")]
+    internal class Credencial
     {
         public Int64 Id { get; set; }
 
@@ -22,63 +22,49 @@ namespace DeveloperAllocationMVP
         [StringLength(250)]
         public String Email { get; set; }
 
-        private String _password;
+        private String _senha;
 
         //verifies the password length, if it is higher than 8 and lower than 12, it encrypts it
         //if the password has exactly 64 characters, it is already encrypted, so it doesn't encrypt it again
-        [StringLength(64)]
-        public String Password
+        public String Senha
         {
             get 
             { 
-                return _password;
+                return _senha;
             }
             set
             {
                 if(value.Length >= 8 && value.Length <= 12)
                 {
-                    _password = ComputeSHA256(value, SALT);
+                    _senha = ComputeSHA256(value, SALT);
                 }
                 else if(value.Length == 64)
                 {
-                    _password = value;
+                    _senha = value;
                 }
                 else
                 {
-                    throw new ArgumentException("A senha deve ter entre 8 e 12 caracteres");
+                    throw new ArgumentException("Senha inválida!");
                 }
             }
         }
 
-        public Boolean Active { get; set; }
+        public Boolean Ativo { get; set; }
         public Boolean Admin { get; set; }
 
         [Required]
-        public Developer Developer { get; set; }
+        public Desenvolvedor Desenvolvedor { get; set; }
 
-        public Credential()
+        public Credencial()
         {
 
-        }
-
-        public Credential(String email, String pwd, Boolean adm, Boolean active)
-        {
-            Email = email;
-            Password = pwd;
-            Admin = adm;
-            Active = active;
-        }
-
-        public override String ToString()
-        {
-            return $"{Email}";
         }
 
         #region Hashing
-        public static String ComputeSHA256(String input)
-        {
-            return ComputeSHA256(input, null);
-        }
+        //public static String ComputeSHA256(String input)
+        //{
+        //    return ComputeSHA256(input, null);
+        //}
 
         public static String ComputeSHA256(String input, String salt)
         {
@@ -89,11 +75,39 @@ namespace DeveloperAllocationMVP
 
                 foreach (byte b in hashValue)
                 {
-                    hash += $"{b:X2}";
+                    hash = $"{b:X2}";
                 }
             }
             return hash;
         }
         #endregion
+
+        //authentication method that verifies if the password given is correct
+        public static Boolean Autenticar(String email, String senha)
+        {
+            Desenvolvedor dev = DevRepos.EncontrarEmail(email);
+
+            if(dev != null)
+            {
+                String senhaBd = dev.Credencial.Senha;
+
+                if (senhaBd == ComputeSHA256(senha, SALT)) return true;
+                else
+                {
+                    MessageBox.Show("SENHA INCORRETA!");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("EMAIL NÃO EXISTENTE!");
+                return false;
+            }
+        }
+
+        public override string ToString()
+        {
+            return String.Format("Email: {0} \nSenha: {1}", Email, Senha);
+        }
     }
 }
