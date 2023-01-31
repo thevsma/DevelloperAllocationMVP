@@ -16,6 +16,11 @@ namespace DeveloperAllocationMVP.Forms
         public DeveloperRegistrationWindow()
         {
             InitializeComponent();
+
+            cbbLevel.Items.Add("Selecione um nível");
+            cbbLevel.Items.Add("Júnior");
+            cbbLevel.Items.Add("Pleno");
+            cbbLevel.Items.Add("Sênior");
         }
 
         public static DeveloperRegistrationWindow GetInstance()

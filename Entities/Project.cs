@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DeveloperAllocationMVP.Entities
 {
     [Table("Projects")]
-    internal class Project
+    public class Project
     {
         public Int64 Id { get; set; }
 

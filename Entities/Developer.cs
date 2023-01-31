@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DeveloperAllocationMVP
 {
     [Table("Developers")]
-    internal class Developer
+    public class Developer
     {
         public Int64 Id { get; set; }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DeveloperAllocationMVP.Entities
 {
     [Table("Allocations")]
-    internal class Allocation
+    public class Allocation
     {
         public Int64 Id { get; set; }
         public DateTime Start { get; set; }

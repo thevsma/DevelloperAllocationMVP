@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace DeveloperAllocationMVP
 {
     [Table("Credentials")]
-    internal class Credential
+    public class Credential
     {
         public Int64 Id { get; set; }
 

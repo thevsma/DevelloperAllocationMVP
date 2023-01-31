@@ -38,7 +38,6 @@
             this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLevel = new System.Windows.Forms.TextBox();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblAdmin = new System.Windows.Forms.Label();
@@ -47,11 +46,13 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbLevel);
             this.panel1.Controls.Add(this.txtConfirmPwd);
             this.panel1.Controls.Add(this.lblConfirmPwd);
             this.panel1.Controls.Add(this.lblTitle);
@@ -61,7 +62,6 @@
             this.panel1.Controls.Add(this.cbAdmin);
             this.panel1.Controls.Add(this.txtPwd);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtLevel);
             this.panel1.Controls.Add(this.dtpBirthday);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.lblAdmin);
@@ -169,17 +169,6 @@
             this.txtEmail.TabIndex = 9;
             this.txtEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyUp);
             // 
-            // txtLevel
-            // 
-            this.txtLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLevel.Location = new System.Drawing.Point(173, 111);
-            this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(200, 21);
-            this.txtLevel.TabIndex = 8;
-            this.txtLevel.Text = "J (Júnior), P (Pleno) ou S (Sênior)";
-            this.txtLevel.Click += new System.EventHandler(this.txtLevel_Click);
-            this.txtLevel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLevel_KeyUp);
-            // 
             // dtpBirthday
             // 
             this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,6 +246,14 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
             // 
+            // cbbLevel
+            // 
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Location = new System.Drawing.Point(173, 111);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(200, 21);
+            this.cbbLevel.TabIndex = 18;
+            // 
             // DeveloperRegistrationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,7 +274,6 @@
         private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLevel;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblAdmin;
@@ -292,5 +288,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtConfirmPwd;
         private System.Windows.Forms.Label lblConfirmPwd;
+        private System.Windows.Forms.ComboBox cbbLevel;
     }
 }
