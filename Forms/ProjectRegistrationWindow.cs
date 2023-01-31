@@ -38,7 +38,7 @@ namespace DeveloperAllocationMVP.Forms
             repos.SaveChanges();
 
             MessageBox.Show(String.Format("Projeto {0} criado!", p.Name));
-            this.Close();
+            txtName.Clear();
         }
     }
 }

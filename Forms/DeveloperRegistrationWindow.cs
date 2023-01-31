@@ -46,7 +46,11 @@ namespace DeveloperAllocationMVP.Forms
                             repos.SaveChanges();
 
                             MessageBox.Show(String.Format("Desenvolvedor {0} cadastrado!", dev.Name));
-                            this.Close();
+                            txtName.Clear();
+                            txtEmail.Clear();
+                            txtPwd.Clear();
+                            txtConfirmPwd.Clear();
+                            txtLevel.Clear();
                         }
                         else MessageBox.Show("A senha deve ter entre 8 e 12 caracteres!!!");
                     }
