@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP.Forms
 {
-    public partial class DeveloperLogWindow : Form
+    public partial class frmDevLog : Form
     {
-        private static DeveloperLogWindow _instance;
-        public DeveloperLogWindow()
+        private static frmDevLog _instance;
+        public frmDevLog()
         {
             InitializeComponent();
 
             lstDevs.DataSource = DeveloperRepository.FindAllDevsCredential();
         }
 
-        public static DeveloperLogWindow GetInstance()
+        public static frmDevLog GetInstance()
         {
-            if (_instance == null || _instance.IsDisposed) _instance = new DeveloperLogWindow();
+            if (_instance == null || _instance.IsDisposed) _instance = new frmDevLog();
             return _instance;
         }
     }

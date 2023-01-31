@@ -1,6 +1,6 @@
 ﻿namespace DeveloperAllocationMVP.Forms
 {
-    partial class AboutMeWindow
+    partial class frmAbout
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutMeWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.pnlAbout = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lnkGit = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,17 @@
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.Size = new System.Drawing.Size(485, 289);
             this.pnlAbout.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(152, 12);
+            this.label1.MaximumSize = new System.Drawing.Size(325, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(322, 200);
+            this.label1.TabIndex = 2;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // lnkGit
             // 
@@ -69,24 +80,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 12);
-            this.label1.MaximumSize = new System.Drawing.Size(325, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 200);
-            this.label1.TabIndex = 2;
-            this.label1.Text = resources.GetString("label1.Text");
-            // 
-            // AboutMeWindow
+            // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 289);
             this.Controls.Add(this.pnlAbout);
-            this.Name = "AboutMeWindow";
+            this.Name = "frmAbout";
             this.Text = "Sobre mim";
             this.pnlAbout.ResumeLayout(false);
             this.pnlAbout.PerformLayout();

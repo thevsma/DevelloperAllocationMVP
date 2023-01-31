@@ -42,7 +42,7 @@ namespace DeveloperAllocationMVP
                 txtEmail.Clear();
                 txtPwd.Clear();
                 this.Hide();
-                MainWindow jp = MainWindow.GetInstance();
+                frmMain jp = frmMain.GetInstance();
                 jp.Show();
                 MessageBox.Show(String.Format("Seja bem vindo(a) {0}!", DeveloperRepository.LoggedDeveloper.Name));
             }

@@ -1,6 +1,6 @@
 ﻿namespace DeveloperAllocationMVP.Forms
 {
-    partial class ProjectRegistrationWindow
+    partial class frmProjRegistration
     {
         /// <summary>
         /// Required designer variable.
@@ -131,14 +131,14 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
             // 
-            // ProjectRegistrationWindow
+            // frmProjRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 182);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "ProjectRegistrationWindow";
+            this.Name = "frmProjRegistration";
             this.Text = "Criação de Projeto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

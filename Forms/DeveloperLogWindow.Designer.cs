@@ -1,6 +1,6 @@
 ﻿namespace DeveloperAllocationMVP.Forms
 {
-    partial class DeveloperLogWindow
+    partial class frmDevLog
     {
         /// <summary>
         /// Required designer variable.
@@ -62,13 +62,13 @@
             this.lstDevs.Size = new System.Drawing.Size(279, 368);
             this.lstDevs.TabIndex = 0;
             // 
-            // DeveloperLogWindow
+            // frmDevLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 450);
             this.Controls.Add(this.pnlMain);
-            this.Name = "DeveloperLogWindow";
+            this.Name = "frmDevLog";
             this.Text = "Lista de Desenvolvedores";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();

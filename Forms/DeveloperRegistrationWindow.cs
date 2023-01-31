@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP.Forms
 {
-    public partial class DeveloperRegistrationWindow : Form
+    public partial class frmDevRegistration : Form
     {
-        private static DeveloperRegistrationWindow _instance;
-        public DeveloperRegistrationWindow()
+        private static frmDevRegistration _instance;
+        public frmDevRegistration()
         {
             InitializeComponent();
 
@@ -24,9 +24,9 @@ namespace DeveloperAllocationMVP.Forms
             cbbLevel.SelectedIndex = 0;
         }
 
-        public static DeveloperRegistrationWindow GetInstance()
+        public static frmDevRegistration GetInstance()
         {
-            if(_instance == null || _instance.IsDisposed) _instance = new DeveloperRegistrationWindow();
+            if(_instance == null || _instance.IsDisposed) _instance = new frmDevRegistration();
             return _instance;
         }
 

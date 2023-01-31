@@ -1,6 +1,6 @@
 ﻿namespace DeveloperAllocationMVP
 {
-    partial class MainWindow
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@
             this.mnuEntries = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDevEntries = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjEntries = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAllocation = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,8 @@
             // 
             this.mnuRegister.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDeveloper,
-            this.mnuProject});
+            this.mnuProject,
+            this.mnuAllocation});
             this.mnuRegister.Name = "mnuRegister";
             this.mnuRegister.Size = new System.Drawing.Size(66, 20);
             this.mnuRegister.Text = "Cadastro";
@@ -111,17 +113,24 @@
             // mnuDevEntries
             // 
             this.mnuDevEntries.Name = "mnuDevEntries";
-            this.mnuDevEntries.Size = new System.Drawing.Size(180, 22);
+            this.mnuDevEntries.Size = new System.Drawing.Size(163, 22);
             this.mnuDevEntries.Text = "Desenvolvedores";
             this.mnuDevEntries.Click += new System.EventHandler(this.mnuDevEntries_Click);
             // 
             // mnuProjEntries
             // 
             this.mnuProjEntries.Name = "mnuProjEntries";
-            this.mnuProjEntries.Size = new System.Drawing.Size(180, 22);
+            this.mnuProjEntries.Size = new System.Drawing.Size(163, 22);
             this.mnuProjEntries.Text = "Projetos";
             // 
-            // MainWindow
+            // mnuAllocation
+            // 
+            this.mnuAllocation.Name = "mnuAllocation";
+            this.mnuAllocation.Size = new System.Drawing.Size(180, 22);
+            this.mnuAllocation.Text = "Alocação";
+            this.mnuAllocation.Click += new System.EventHandler(this.mnuAllocation_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +138,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainWindow";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Janela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
@@ -152,5 +161,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuEntries;
         private System.Windows.Forms.ToolStripMenuItem mnuDevEntries;
         private System.Windows.Forms.ToolStripMenuItem mnuProjEntries;
+        private System.Windows.Forms.ToolStripMenuItem mnuAllocation;
     }
 }

@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP.Forms
 {
-    public partial class ProjectRegistrationWindow : Form
+    public partial class frmProjRegistration : Form
     {
-        private static ProjectRegistrationWindow _instance;
-        public ProjectRegistrationWindow()
+        private static frmProjRegistration _instance;
+        public frmProjRegistration()
         {
             InitializeComponent();
         }
 
-        public static ProjectRegistrationWindow GetInstance()
+        public static frmProjRegistration GetInstance()
         {
-            if(_instance == null || _instance.IsDisposed) _instance = new ProjectRegistrationWindow();
+            if(_instance == null || _instance.IsDisposed) _instance = new frmProjRegistration();
             return _instance;
         }
 

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP
 {
-    public partial class MainWindow : Form
+    public partial class frmMain : Form
     {
-        private static MainWindow _instance;
-        public MainWindow()
+        private static frmMain _instance;
+        public frmMain()
         {
             InitializeComponent();
 
@@ -25,9 +25,9 @@ namespace DeveloperAllocationMVP
             }
         }
 
-        public static MainWindow GetInstance()
+        public static frmMain GetInstance()
         {
-            if(_instance == null || _instance.IsDisposed) _instance = new MainWindow();
+            if(_instance == null || _instance.IsDisposed) _instance = new frmMain();
             return _instance;
         }
 
@@ -43,30 +43,37 @@ namespace DeveloperAllocationMVP
 
         private void mnuDeveloper_Click(object sender, EventArgs e)
         {
-            DeveloperRegistrationWindow d = DeveloperRegistrationWindow.GetInstance();
+            frmDevRegistration d = frmDevRegistration.GetInstance();
             d.MdiParent = this;
             d.Show();
         }
 
         private void mnuAbout_Click(object sender, EventArgs e)
         {
-            AboutMeWindow a = AboutMeWindow.GetInstance();
+            frmAbout a = frmAbout.GetInstance();
             a.MdiParent = this;
             a.Show();
         }
 
         private void mnuProject_Click(object sender, EventArgs e)
         {
-            ProjectRegistrationWindow p = ProjectRegistrationWindow.GetInstance();
+            frmProjRegistration p = frmProjRegistration.GetInstance();
             p.MdiParent = this;
             p.Show();
         }
 
         private void mnuDevEntries_Click(object sender, EventArgs e)
         {
-            DeveloperLogWindow d = DeveloperLogWindow.GetInstance();
+            frmDevLog d = frmDevLog.GetInstance();
             d.MdiParent = this;
             d.Show();
+        }
+
+        private void mnuAllocation_Click(object sender, EventArgs e)
+        {
+            frmAllocation a = frmAllocation.GetInstance();
+            a.MdiParent = this;
+            a.Show();
         }
     }
 }

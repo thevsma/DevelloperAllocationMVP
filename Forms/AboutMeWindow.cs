@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace DeveloperAllocationMVP.Forms
 {
-    public partial class AboutMeWindow : Form
+    public partial class frmAbout : Form
     {
-        private static AboutMeWindow _instance;
-        public AboutMeWindow()
+        private static frmAbout _instance;
+        public frmAbout()
         {
             InitializeComponent();
         }
 
-        public static AboutMeWindow GetInstance()
+        public static frmAbout GetInstance()
         {
-            if(_instance == null || _instance.IsDisposed) _instance = new AboutMeWindow();
+            if(_instance == null || _instance.IsDisposed) _instance = new frmAbout();
             return _instance;
         }
 

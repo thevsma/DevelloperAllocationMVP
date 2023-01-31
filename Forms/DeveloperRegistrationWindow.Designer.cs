@@ -1,6 +1,6 @@
 ﻿namespace DeveloperAllocationMVP.Forms
 {
-    partial class DeveloperRegistrationWindow
+    partial class frmDevRegistration
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.txtConfirmPwd = new System.Windows.Forms.TextBox();
             this.lblConfirmPwd = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblBirthday = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.cbbLevel = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 311);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbLevel
+            // 
+            this.cbbLevel.FormattingEnabled = true;
+            this.cbbLevel.Location = new System.Drawing.Point(173, 111);
+            this.cbbLevel.Name = "cbbLevel";
+            this.cbbLevel.Size = new System.Drawing.Size(200, 21);
+            this.cbbLevel.TabIndex = 18;
             // 
             // txtConfirmPwd
             // 
@@ -246,21 +254,13 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
             // 
-            // cbbLevel
-            // 
-            this.cbbLevel.FormattingEnabled = true;
-            this.cbbLevel.Location = new System.Drawing.Point(173, 111);
-            this.cbbLevel.Name = "cbbLevel";
-            this.cbbLevel.Size = new System.Drawing.Size(200, 21);
-            this.cbbLevel.TabIndex = 18;
-            // 
-            // DeveloperRegistrationWindow
+            // frmDevRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 311);
             this.Controls.Add(this.panel1);
-            this.Name = "DeveloperRegistrationWindow";
+            this.Name = "frmDevRegistration";
             this.Text = "Cadastro de Desenvolvedores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
