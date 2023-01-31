@@ -35,10 +35,10 @@
             this.mnuRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDeveloper = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProject = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAllocation = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEntries = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDevEntries = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProjEntries = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAllocation = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,16 +90,23 @@
             // mnuDeveloper
             // 
             this.mnuDeveloper.Name = "mnuDeveloper";
-            this.mnuDeveloper.Size = new System.Drawing.Size(180, 22);
+            this.mnuDeveloper.Size = new System.Drawing.Size(152, 22);
             this.mnuDeveloper.Text = "Desenvolvedor";
             this.mnuDeveloper.Click += new System.EventHandler(this.mnuDeveloper_Click);
             // 
             // mnuProject
             // 
             this.mnuProject.Name = "mnuProject";
-            this.mnuProject.Size = new System.Drawing.Size(180, 22);
+            this.mnuProject.Size = new System.Drawing.Size(152, 22);
             this.mnuProject.Text = "Projeto";
             this.mnuProject.Click += new System.EventHandler(this.mnuProject_Click);
+            // 
+            // mnuAllocation
+            // 
+            this.mnuAllocation.Name = "mnuAllocation";
+            this.mnuAllocation.Size = new System.Drawing.Size(152, 22);
+            this.mnuAllocation.Text = "Alocação";
+            this.mnuAllocation.Click += new System.EventHandler(this.mnuAllocation_Click);
             // 
             // mnuEntries
             // 
@@ -113,22 +120,16 @@
             // mnuDevEntries
             // 
             this.mnuDevEntries.Name = "mnuDevEntries";
-            this.mnuDevEntries.Size = new System.Drawing.Size(163, 22);
+            this.mnuDevEntries.Size = new System.Drawing.Size(180, 22);
             this.mnuDevEntries.Text = "Desenvolvedores";
             this.mnuDevEntries.Click += new System.EventHandler(this.mnuDevEntries_Click);
             // 
             // mnuProjEntries
             // 
             this.mnuProjEntries.Name = "mnuProjEntries";
-            this.mnuProjEntries.Size = new System.Drawing.Size(163, 22);
+            this.mnuProjEntries.Size = new System.Drawing.Size(180, 22);
             this.mnuProjEntries.Text = "Projetos";
-            // 
-            // mnuAllocation
-            // 
-            this.mnuAllocation.Name = "mnuAllocation";
-            this.mnuAllocation.Size = new System.Drawing.Size(180, 22);
-            this.mnuAllocation.Text = "Alocação";
-            this.mnuAllocation.Click += new System.EventHandler(this.mnuAllocation_Click);
+            this.mnuProjEntries.Click += new System.EventHandler(this.mnuProjEntries_Click);
             // 
             // frmMain
             // 
