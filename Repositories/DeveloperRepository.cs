@@ -9,6 +9,8 @@ namespace DeveloperAllocationMVP
 {
     internal class DeveloperRepository
     {
+        public static Developer LoggedDeveloper { get; set; }
+
         //method used to verify if the developer isn't already in the database, if it is, it changes it's state to 'modified'
         public static void Save(Developer dev)
         {

@@ -22,7 +22,7 @@ namespace DeveloperAllocationMVP.Repositories
 
                     if (pwdBd == Credential.ComputeSHA256(password, Credential.SALT))
                     {
-                        Repository.LoggedDeveloper = dev;
+                        DeveloperRepository.LoggedDeveloper = dev;
                         return true;
                     }
                     else

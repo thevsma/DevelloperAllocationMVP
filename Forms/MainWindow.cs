@@ -18,7 +18,7 @@ namespace DeveloperAllocationMVP
         {
             InitializeComponent();
 
-            if(Repository.LoggedDeveloper.Credential.Admin == false)
+            if(DeveloperRepository.LoggedDeveloper.Credential.Admin == false)
             {
                 mnuDeveloper.Enabled = false;
                 mnuProject.Enabled = false;
