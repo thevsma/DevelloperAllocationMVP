@@ -21,6 +21,7 @@ namespace DeveloperAllocationMVP.Forms
             cbbLevel.Items.Add("Júnior");
             cbbLevel.Items.Add("Pleno");
             cbbLevel.Items.Add("Sênior");
+            cbbLevel.SelectedIndex = 0;
         }
 
         public static DeveloperRegistrationWindow GetInstance()
@@ -39,7 +40,8 @@ namespace DeveloperAllocationMVP.Forms
                     {
                         if (txtPwd.Text.Length >= 8 && txtPwd.Text.Length <= 12)
                         {
-                            Developer dev = new Developer(txtName.Text, dtpBirthday.Value, txtLevel.Text[0]);
+                            Developer dev = new Developer(txtName.Text, dtpBirthday.Value);
+                            SetLevel(dev);
 
                             Credential cred = new Credential(txtEmail.Text, txtPwd.Text, cbAdmin.Checked, cbActive.Checked);
 
@@ -55,7 +57,7 @@ namespace DeveloperAllocationMVP.Forms
                             txtEmail.Clear();
                             txtPwd.Clear();
                             txtConfirmPwd.Clear();
-                            txtLevel.Clear();
+                            cbbLevel.SelectedIndex = 0;
                         }
                         else MessageBox.Show("A senha deve ter entre 8 e 12 caracteres!!!");
                     }
@@ -64,11 +66,6 @@ namespace DeveloperAllocationMVP.Forms
                 else MessageBox.Show("Os campos Nome e/ou Email não podem estar vazios!!!");
             }
             else MessageBox.Show("As senhas não coincidem!!!");
-        }
-
-        private void txtLevel_Click(object sender, EventArgs e)
-        {
-            txtLevel.SelectAll();
         }
 
         private void txtPwd_Click(object sender, EventArgs e)
@@ -104,6 +101,22 @@ namespace DeveloperAllocationMVP.Forms
         private void txtConfirmPwd_KeyUp(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter) btnRegister.PerformClick();
+        }
+
+        public void SetLevel(Developer dev)
+        {
+            switch (cbbLevel.SelectedIndex)
+            {
+                case 1:
+                    dev.LvlInMemory = 'J';
+                    break;
+                case 2:
+                    dev.LvlInMemory = 'P';
+                    break;
+                case 3:
+                    dev.LvlInMemory = 'S';
+                    break;
+            }
         }
     }
 }

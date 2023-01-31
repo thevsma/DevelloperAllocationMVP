@@ -48,11 +48,10 @@ namespace DeveloperAllocationMVP
 
         }
 
-        public Developer(String name, DateTime birthday, Char lvlmem)
+        public Developer(String name, DateTime birthday)
         {
             Name = name;
             Birthday = birthday;
-            LvlInMemory = lvlmem;
         }
 
         public override String ToString()
