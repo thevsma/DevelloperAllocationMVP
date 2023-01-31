@@ -27,19 +27,19 @@ namespace DeveloperAllocationMVP.Repositories
                     }
                     else
                     {
-                        MessageBox.Show("SENHA INCORRETA!");
+                        MessageBox.Show("Senha incorreta!");
                         return false;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("ESTE USUÁRIO NÃO ESTÁ ATIVO!");
+                    MessageBox.Show("Este usuário não está ativo!");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("EMAIL NÃO EXISTENTE!");
+                MessageBox.Show("Email não existente!");
                 return false;
             }
         }
