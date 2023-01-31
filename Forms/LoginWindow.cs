@@ -47,10 +47,5 @@ namespace DeveloperAllocationMVP
                 MessageBox.Show(String.Format("Seja bem vindo(a) {0}!", DeveloperRepository.LoggedDeveloper.Name));
             }
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            Repository repos = new Repository();
-        }
     }
 }
