@@ -108,6 +108,7 @@
             this.txtProject.Name = "txtProject";
             this.txtProject.Size = new System.Drawing.Size(120, 21);
             this.txtProject.TabIndex = 5;
+            this.txtProject.TextChanged += new System.EventHandler(this.txtProject_TextChanged);
             // 
             // lstProject
             // 

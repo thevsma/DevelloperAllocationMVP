@@ -104,7 +104,7 @@ namespace DeveloperAllocationMVP
             {
                 using(Repository repos = new Repository())
                 {
-                    return repos.Developers.Include("Credential").Where(d => d.Id== id).FirstOrDefault<Developer>();
+                    return repos.Developers.Include("Credential").Where(d => d.Id == id).FirstOrDefault<Developer>();
                 }
             }
             catch(Exception)

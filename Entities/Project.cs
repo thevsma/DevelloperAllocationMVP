@@ -23,5 +23,10 @@ namespace DeveloperAllocationMVP.Entities
 
         [NotMapped]
         public List<Allocation> Allocations { get; set; }
+
+        public override String ToString()
+        {
+            return String.Format("{0}, {1: dd/MM/yyyy} - {2: dd/MM/yyyy}", Name, Start, PlannedCompletion);
+        }
     }
 }
