@@ -22,5 +22,15 @@ namespace DeveloperAllocationMVP.Entities
         {
 
         }
+
+        public Allocation(DateTime start, DateTime completion, Byte hours, Decimal pay, Developer dev, Project proj)
+        {
+            Start = start;
+            Completion = completion;
+            WeeklyHours = hours;
+            Payment = pay;
+            Developer = dev;
+            Project = proj;
+        }
     }
 }
