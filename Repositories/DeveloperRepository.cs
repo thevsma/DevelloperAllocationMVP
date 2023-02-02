@@ -21,6 +21,7 @@ namespace DeveloperAllocationMVP
                     if(dev.Id == 0)
                     {
                         repos.Developers.Add(dev);
+                        repos.SaveChanges();
                     }
                     else
                     {

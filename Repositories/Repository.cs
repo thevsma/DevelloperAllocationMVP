@@ -1,4 +1,5 @@
 ﻿using DeveloperAllocationMVP.Entities;
+using DeveloperAllocationMVP.Repositories;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace DeveloperAllocationMVP
         public DbSet<Credential> Credentials { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Allocation> Allocations { get; set; }
+        public DbSet<Entities.Task> Tasks { get; set; }
 
         public Repository() : base(GetDbConnection(), false)
         {
@@ -42,8 +44,29 @@ namespace DeveloperAllocationMVP
                 credPadrao.Developer = devPadrao;
                 devPadrao.Credential = credPadrao;
 
-                //adding the default developer to the dbset and saving the changes on the repository
-                repos.Developers.Add(devPadrao);
+                //creating a default project
+                Project projPadrao = new Project();
+                projPadrao.Name = "teste";
+                DateTime startProjPadrao = new DateTime(2023, 02, 01);
+                DateTime plannedCompletionProj = new DateTime(2023, 02, 02);
+                projPadrao.Start = startProjPadrao;
+                projPadrao.PlannedCompletion = plannedCompletionProj;
+
+                //creating a default allocation
+                Allocation alocPadrao = new Allocation();
+                DateTime startAlocPadrao = new DateTime(2023, 02, 01);
+                DateTime CompletionAlocPadrao = new DateTime(2023, 02, 02);
+                alocPadrao.Start = startAlocPadrao;
+                alocPadrao.Completion = CompletionAlocPadrao;
+                alocPadrao.WeeklyHours = 4;
+                alocPadrao.Payment = 50.00m;
+                alocPadrao.Developer = devPadrao;
+                alocPadrao.Project = projPadrao;
+
+                //adding the default instances to the dbset and saving the changes on the repository
+                DeveloperRepository.Save(devPadrao);
+                ProjectRepository.Save(projPadrao);
+                AllocationRepository.Save(alocPadrao);
                 repos.SaveChanges();
             }
         }

@@ -32,5 +32,10 @@ namespace DeveloperAllocationMVP.Entities
             Developer = dev;
             Project = proj;
         }
+
+        public override String ToString()
+        {
+            return String.Format("Desenvolvedor: {0} / Projeto: {1}", Developer, Project);
+        }
     }
 }

@@ -102,6 +102,7 @@
     <Compile Include="Entities\Credential.cs" />
     <Compile Include="Entities\Developer.cs" />
     <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\Task.cs" />
     <Compile Include="Forms\AboutMeWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,12 @@
     <Compile Include="Forms\ProjectRegistrationWindow.Designer.cs">
       <DependentUpon>ProjectRegistrationWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TaskRegistrationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaskRegistrationWindow.Designer.cs">
+      <DependentUpon>TaskRegistrationWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\AllocationRepository.cs" />
     <Compile Include="Repositories\CredentialRepository.cs" />
     <Compile Include="Repositories\DeveloperRepository.cs" />
@@ -157,6 +164,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ProjectRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\TaskRepository.cs" />
     <EmbeddedResource Include="Forms\AboutMeWindow.resx">
       <DependentUpon>AboutMeWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectRegistrationWindow.resx">
       <DependentUpon>ProjectRegistrationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaskRegistrationWindow.resx">
+      <DependentUpon>TaskRegistrationWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -34,7 +34,7 @@ namespace DeveloperAllocationMVP.Forms
         {
             if(txtConfirmPwd.Text.Equals(txtPwd.Text))
             {
-                if(txtName.Text != "" && txtEmail.Text != "")
+                if(txtName.Text != null && txtEmail.Text != null)
                 {
                     if (DeveloperRepository.FindByEmail(txtEmail.Text) == null)
                     {

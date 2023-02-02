@@ -22,6 +22,8 @@ namespace DeveloperAllocationMVP
             {
                 mnuDeveloper.Enabled = false;
                 mnuProject.Enabled = false;
+                mnuAllocation.Enabled = false;
+                mnuTask.Enabled = false;
             }
         }
 
@@ -81,6 +83,13 @@ namespace DeveloperAllocationMVP
             frmProjLog p = frmProjLog.GetInstance();
             p.MdiParent = this;
             p.Show();
+        }
+
+        private void mnuTask_Click(object sender, EventArgs e)
+        {
+            frmTask t = frmTask.GetInstance();
+            t.MdiParent = this;
+            t.Show();
         }
     }
 }

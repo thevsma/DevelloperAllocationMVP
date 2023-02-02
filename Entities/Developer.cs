@@ -56,7 +56,7 @@ namespace DeveloperAllocationMVP
 
         public override String ToString()
         {
-            return String.Format("{0}, Nível {1}, {2}", Name, LvlInMemory, Credential);
+            return Name;
         }
     }
 }

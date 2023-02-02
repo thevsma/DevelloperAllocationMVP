@@ -1,4 +1,5 @@
 ﻿using DeveloperAllocationMVP.Entities;
+using DeveloperAllocationMVP.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,9 +34,7 @@ namespace DeveloperAllocationMVP.Forms
             p.Start = dtpStart.Value;
             p.PlannedCompletion = dtpPlanned.Value;
 
-            Repository repos = new Repository();
-            repos.Projects.Add(p);
-            repos.SaveChanges();
+            ProjectRepository.Save(p);
 
             MessageBox.Show(String.Format("Projeto {0} criado!", p.Name));
             txtName.Clear();

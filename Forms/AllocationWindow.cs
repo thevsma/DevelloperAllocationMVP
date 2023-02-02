@@ -17,6 +17,8 @@ namespace DeveloperAllocationMVP.Forms
     public partial class frmAllocation : Form
     {
         private static frmAllocation _instance;
+        public Developer SelectedDev { get; set; }
+        public Project SelectedProj { get; set; }
         public frmAllocation()
         {
             InitializeComponent();
@@ -80,21 +82,25 @@ namespace DeveloperAllocationMVP.Forms
 
         private void lstDeveloper_DoubleClick(object sender, EventArgs e)
         {
-            lblSelectedDev.Text = String.Format("Desenvolvedor selecionado: {0}", lstDeveloper.SelectedItem);
+            //lblSelectedDev.Text = String.Format("Desenvolvedor selecionado: {0}", lstDeveloper.SelectedItem);
+            SelectedDev = (Developer)lstDeveloper.SelectedItem;
+            lblSelectedDev.Text = String.Format("Desenvolvedor selecionado: {0}", SelectedDev);
         }
 
         private void lstProject_DoubleClick(object sender, EventArgs e)
         {
-            lblSelectedProj.Text = String.Format("Projeto selecionado: {0}", lstProject.SelectedItem);
+            //lblSelectedProj.Text = String.Format("Projeto selecionado: {0}", lstProject.SelectedItem);
+            SelectedProj = (Project)lstProject.SelectedItem;
+            lblSelectedProj.Text = String.Format("Projeto selecionado: {0}", SelectedProj);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(lstDeveloper.SelectedItem != null && lstProject.SelectedItems != null)
+            if (lstDeveloper.SelectedItem != null && lstProject.SelectedItems != null)
             {
-                if(numHours.Value > 0)
+                if (numHours.Value > 0)
                 {
-                    Allocation a = new Allocation(dtpStart.Value, dtpFinish.Value, Convert.ToByte(numHours.Value), Convert.ToDecimal(txtPay.Text), (Developer)lstDeveloper.SelectedItem, (Project)lstProject.SelectedItem);
+                    Allocation a = new Allocation(dtpStart.Value, dtpFinish.Value, Convert.ToByte(numHours.Value), Convert.ToDecimal(txtPay.Text), SelectedDev, SelectedProj);
 
                     AllocationRepository.Save(a);
 
@@ -106,7 +112,9 @@ namespace DeveloperAllocationMVP.Forms
                     lstProject.SelectedIndex = 0;
                     numHours.Value = 0;
                 }
+                else MessageBox.Show("O número de horas não pode ser 0!");
             }
+            else MessageBox.Show("Não há um desenvolvedor ou um projeto selecionado!");
         }
     }
 }

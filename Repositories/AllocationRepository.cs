@@ -22,6 +22,7 @@ namespace DeveloperAllocationMVP.Repositories
                     if (a.Id == 0)
                     {
                         repos.Allocations.Add(a);
+                        repos.SaveChanges();
                     }
                     else
                     {
@@ -44,6 +45,21 @@ namespace DeveloperAllocationMVP.Repositories
                 using (Repository repos = new Repository())
                 {
                     return repos.Allocations.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static List<Allocation> FindByDevOrProj(String name)
+        {
+            try
+            {
+                using(Repository repos = new Repository())
+                {
+                    return repos.Allocations.Include(a => a.Developer).Include(a => a.Project).Where(a => a.Developer.Name.Contains(name) || a.Project.Name.Contains(name)).ToList<Allocation>();
                 }
             }
             catch (Exception)

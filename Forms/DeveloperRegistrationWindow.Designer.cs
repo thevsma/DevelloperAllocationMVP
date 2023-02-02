@@ -82,7 +82,7 @@
             this.cbbLevel.Location = new System.Drawing.Point(173, 111);
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(200, 21);
-            this.cbbLevel.TabIndex = 18;
+            this.cbbLevel.TabIndex = 8;
             // 
             // txtConfirmPwd
             // 
@@ -91,7 +91,7 @@
             this.txtConfirmPwd.Name = "txtConfirmPwd";
             this.txtConfirmPwd.PasswordChar = '*';
             this.txtConfirmPwd.Size = new System.Drawing.Size(200, 21);
-            this.txtConfirmPwd.TabIndex = 17;
+            this.txtConfirmPwd.TabIndex = 11;
             this.txtConfirmPwd.TextChanged += new System.EventHandler(this.txtConfirmPwd_TextChanged);
             this.txtConfirmPwd.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConfirmPwd_KeyUp);
             // 
@@ -123,7 +123,7 @@
             this.cbActive.Location = new System.Drawing.Point(173, 237);
             this.cbActive.Name = "cbActive";
             this.cbActive.Size = new System.Drawing.Size(15, 14);
-            this.cbActive.TabIndex = 14;
+            this.cbActive.TabIndex = 13;
             this.cbActive.UseVisualStyleBackColor = true;
             // 
             // lblActive
@@ -143,7 +143,7 @@
             this.btnRegister.Location = new System.Drawing.Point(265, 255);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(108, 37);
-            this.btnRegister.TabIndex = 12;
+            this.btnRegister.TabIndex = 14;
             this.btnRegister.Text = "Cadastrar";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -154,7 +154,7 @@
             this.cbAdmin.Location = new System.Drawing.Point(173, 217);
             this.cbAdmin.Name = "cbAdmin";
             this.cbAdmin.Size = new System.Drawing.Size(15, 14);
-            this.cbAdmin.TabIndex = 11;
+            this.cbAdmin.TabIndex = 12;
             this.cbAdmin.UseVisualStyleBackColor = true;
             // 
             // txtPwd

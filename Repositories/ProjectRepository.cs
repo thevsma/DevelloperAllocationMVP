@@ -20,6 +20,7 @@ namespace DeveloperAllocationMVP.Repositories
                     if(project.Id == 0)
                     {
                         repos.Projects.Add(project);
+                        repos.SaveChanges();
                     }
                     else
                     {
