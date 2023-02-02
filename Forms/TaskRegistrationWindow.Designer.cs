@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.lstTask = new System.Windows.Forms.ListBox();
             this.txtTask = new System.Windows.Forms.TextBox();
             this.lblAllocation = new System.Windows.Forms.Label();
             this.lstAllocation = new System.Windows.Forms.ListBox();
             this.txtAllocation = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.label1);
             this.pnlMain.Controls.Add(this.btnAdd);
             this.pnlMain.Controls.Add(this.lstTask);
             this.pnlMain.Controls.Add(this.txtTask);
@@ -51,13 +53,24 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(291, 376);
+            this.pnlMain.Size = new System.Drawing.Size(291, 407);
             this.pnlMain.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(168, 377);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(84, 27);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Adicionar";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lstTask
             // 
             this.lstTask.FormattingEnabled = true;
-            this.lstTask.Location = new System.Drawing.Point(44, 227);
+            this.lstTask.Location = new System.Drawing.Point(44, 276);
             this.lstTask.Name = "lstTask";
             this.lstTask.Size = new System.Drawing.Size(208, 95);
             this.lstTask.TabIndex = 5;
@@ -65,12 +78,10 @@
             // txtTask
             // 
             this.txtTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTask.Location = new System.Drawing.Point(44, 200);
+            this.txtTask.Location = new System.Drawing.Point(44, 249);
             this.txtTask.Name = "txtTask";
             this.txtTask.Size = new System.Drawing.Size(208, 21);
             this.txtTask.TabIndex = 4;
-            this.txtTask.Text = "Insira a tarefa aqui";
-            this.txtTask.Enter += new System.EventHandler(this.txtTask_Enter);
             // 
             // lblAllocation
             // 
@@ -110,22 +121,21 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Criação de Tarefas";
             // 
-            // btnAdd
+            // label1
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(168, 328);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 27);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Adicionar";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Insira a tarefa aqui:";
             // 
             // frmTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 376);
+            this.ClientSize = new System.Drawing.Size(291, 407);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmTask";
             this.Text = "Criação de Tarefas";
@@ -145,5 +155,6 @@
         private System.Windows.Forms.TextBox txtAllocation;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label1;
     }
 }

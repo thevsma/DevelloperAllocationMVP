@@ -18,7 +18,7 @@ namespace DeveloperAllocationMVP
         public DbSet<Credential> Credentials { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Allocation> Allocations { get; set; }
-        public DbSet<Entities.Task> Tasks { get; set; }
+        public DbSet<ProjectTasks> Tasks { get; set; }
 
         public Repository() : base(GetDbConnection(), false)
         {

@@ -9,16 +9,28 @@ using System.Threading.Tasks;
 namespace DeveloperAllocationMVP.Entities
 {
     [Table("Tasks")]
-    internal class Task
+    public class ProjectTasks
     {
         public Int64 Id { get; set; }
+        public Int64 AllocId { get; set; }
         
         [MaxLength(200)]
         public String Description { get; set; }
 
-        public Task()
+        public ProjectTasks()
         {
 
+        }
+
+        public ProjectTasks(String description, Int64 allocId)
+        {
+            Description = description;
+            AllocId = allocId;
+        }
+
+        public override String ToString()
+        {
+            return Description;
         }
     }
 }

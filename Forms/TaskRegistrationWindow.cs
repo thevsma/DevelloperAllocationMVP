@@ -36,6 +36,7 @@ namespace DeveloperAllocationMVP.Forms
         {
             SelectedAllocation = (Allocation)lstAllocation.SelectedItem;
             lblAllocation.Text = String.Format("Desenvolvedor: {0} / Projeto: {1}", SelectedAllocation.Developer, SelectedAllocation.Project);
+            lstTask.DataSource = TaskRepository.FindAllTasksByAlloc(SelectedAllocation.Id);
         }
 
         private void txtTask_Enter(object sender, EventArgs e)
@@ -49,7 +50,10 @@ namespace DeveloperAllocationMVP.Forms
             {
                 if (txtTask.Text != null)
                 {
+                    ProjectTasks t = new ProjectTasks(txtTask.Text, SelectedAllocation.Id);
+                    TaskRepository.Save(SelectedAllocation, t);
 
+                    lstTask.DataSource = TaskRepository.FindAllTasksByAlloc(SelectedAllocation.Id);
                 }
                 else MessageBox.Show("Não há nenhuma tarefa descrita!");
             }

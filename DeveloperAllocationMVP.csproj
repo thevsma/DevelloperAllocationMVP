@@ -102,7 +102,7 @@
     <Compile Include="Entities\Credential.cs" />
     <Compile Include="Entities\Developer.cs" />
     <Compile Include="Entities\Project.cs" />
-    <Compile Include="Entities\Task.cs" />
+    <Compile Include="Entities\ProjectTasks.cs" />
     <Compile Include="Forms\AboutMeWindow.cs">
       <SubType>Form</SubType>
     </Compile>

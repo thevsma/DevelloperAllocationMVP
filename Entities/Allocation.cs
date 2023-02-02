@@ -17,14 +17,16 @@ namespace DeveloperAllocationMVP.Entities
         public Decimal Payment { get; set; }
         public Developer Developer { get; set; }
         public Project Project { get; set; }
+        public List<ProjectTasks> Tasks { get; set; }
 
         public Allocation()
         {
-
+            Tasks = new List<ProjectTasks>();
         }
 
         public Allocation(DateTime start, DateTime completion, Byte hours, Decimal pay, Developer dev, Project proj)
         {
+            Tasks = new List<ProjectTasks>();
             Start = start;
             Completion = completion;
             WeeklyHours = hours;
