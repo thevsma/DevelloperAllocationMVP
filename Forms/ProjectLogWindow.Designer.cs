@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lstProject = new System.Windows.Forms.ListBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +44,14 @@
             this.pnlMain.Size = new System.Drawing.Size(324, 307);
             this.pnlMain.TabIndex = 0;
             // 
+            // lstProject
+            // 
+            this.lstProject.FormattingEnabled = true;
+            this.lstProject.Location = new System.Drawing.Point(48, 45);
+            this.lstProject.Name = "lstProject";
+            this.lstProject.Size = new System.Drawing.Size(225, 225);
+            this.lstProject.TabIndex = 1;
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -54,14 +62,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Lista de Projetos Cadastrados";
             // 
-            // lstProject
-            // 
-            this.lstProject.FormattingEnabled = true;
-            this.lstProject.Location = new System.Drawing.Point(48, 45);
-            this.lstProject.Name = "lstProject";
-            this.lstProject.Size = new System.Drawing.Size(225, 225);
-            this.lstProject.TabIndex = 1;
-            // 
             // frmProjLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -69,7 +69,7 @@
             this.ClientSize = new System.Drawing.Size(324, 307);
             this.Controls.Add(this.pnlMain);
             this.Name = "frmProjLog";
-            this.Text = "ProjectLogWindow";
+            this.Text = "Lista de Projetos";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);

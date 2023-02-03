@@ -39,11 +39,6 @@ namespace DeveloperAllocationMVP.Forms
             lstTask.DataSource = TaskRepository.FindAllTasksByAlloc(SelectedAllocation.Id);
         }
 
-        private void txtTask_Enter(object sender, EventArgs e)
-        {
-            txtTask.SelectAll();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (SelectedAllocation.Id != 0)
